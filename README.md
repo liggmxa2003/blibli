@@ -6,6 +6,5 @@
 | ---------- | ---------- |
 |      semantic-ui      |   springboot         |
 |     thymeleaf       |  mybatis          |
-|    后台页面部分参考若依        |  redis          |
 |      prism      |  druid          |
 |      editormd      |  quartz          |
