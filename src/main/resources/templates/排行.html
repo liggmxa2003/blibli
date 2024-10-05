@@ -1,0 +1,210 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="_fragments :: head(~{::title})">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover">
+    <title>Ligg动漫</title>
+    <link href="/static/css/common.css" th:href="@{css/common.css}" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+</head>
+
+
+<body class="theme1">
+    <!-- <div class="gen-loading bj load-icon-on" data-time="0" style="display: none;"></div>
+    <img class="loading1 none" data-ii="on" src="img/logo/LOGOpng.png" alt="稀饭动漫 - 免费高清动漫分享">
+    <img class="loading2 none" src="img/logo/LOGOpng.png" alt="稀饭动漫 - 免费高清动漫分享">
+    </div> -->
+    <!-- 导航栏 -->
+    <nav th:fragment="menu(n)" class="ui attached segment m-padded-tb-mini m-shadow-small" >
+        <div class="ui container">
+          <div class="ui secondary stackable menu">
+            <a href="#">
+                <img src="/static/images/LOGOpng.png" th:src="@{images/LOGOpng.png}" alt="" style="height: 80px; width: 180px;">
+            </a>
+            <a href="#" th:href="@{/}" class="m-item item blue m-mobile-hide" th:classappend="${n==1}?'active'"><i class=" home icon"></i>首页</a>
+            <a href="#" th:href="@{/types/-1}" class="m-item violet item m-mobile-hide" th:classappend="${n==2}?'active'"><i class=" idea icon"></i>分类</a>
+            <a href="#" th:href="@{/tags/-1}" class="m-item pink item m-mobile-hide" th:classappend="${n==3}?'active'"><i class=" tags icon"></i>标签</a>
+            <a href="#" th:href="@{/archives}"class="m-item orange item m-mobile-hide" th:classappend="${n==4}?'active'"><i class=" clone icon"></i>时间线</a>
+            <a href="#" th:href="@{/about}"class="m-item green item m-mobile-hide" th:classappend="${n==5}?'active'"><i class=" info icon"></i>关于我</a>
+            <div class="right item">
+                <div class="ui icon ">
+                    <input type="text" placeholder="搜索...">
+                    <i class="search link icon"></i>
+                    </input>
+                </div>
+                <a class="item" href="#"><i class="user icon"></i>登录</a>
+            </div>
+          </div>
+        </div>
+        <!-- <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+          <i class="sidebar icon"></i>
+        </a> -->
+      </nav>
+    
+    <div class="public-top-bj-box rel">
+        <div class="top-banner top16 wap-hide"></div>
+        <div class="top-banner slide-wap none top4"></div>
+        <div class="top-box">
+            <h4 class="title cor1">热映排行</h4>
+            <p class="brief">新鲜热播好剧</p>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-card p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-primary">连载新番</h2>
+            <ol class="list-decimal list-inside">
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">1</span>
+                        <img src="	https://lain.bgm.tv/pic/cover/l/d1/1c/443428_FIhFu.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">不时用德语小声说真心话的果实前同学</p>
+                            <span class="text-muted-foreground">09月=22:40</span>
+                            <span class="text-primary">72074</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">2</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/e4/dc/464376_NsZRw.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">败大女主太多了！</p>
+                            <span class="text-muted-foreground">07月=01:30</span>
+                            <span class="text-primary">41824</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">3</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/53/13/410346_z8j5n.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">关于我转生成为史莱姆这档事 第三季</p>
+                            <span class="text-muted-foreground">09月=23:10</span>
+                            <span class="text-primary">32263</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">4</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/26/d6/425998_dnzr8.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">关于我转生成为史莱姆这档事 第三季</p>
+                            <span class="text-muted-foreground">09月=23:10</span>
+                            <span class="text-primary">25857</span>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="bg-card p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-primary">完结旧番</h2>
+            <ol class="list-decimal list-inside">
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">1</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/7c/8e/424883_BpzVb.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">梦想成为魔法少女(BD完全无修版)</p>
+                            <span class="text-muted-foreground">已完结</span>
+                            <span class="text-primary">35299</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">2</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/4c/ce/444339_91FQX.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">魔都精兵的奴隶</p>
+                            <span class="text-muted-foreground">已完结</span>
+                            <span class="text-primary">32659</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">3</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/80/d9/362575_5yQR2.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">鬼灭之刃</p>
+                            <span class="text-muted-foreground">已完结</span>
+                            <span class="text-primary">18606</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">4</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/ec/82/411428_xwKKP.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">魔物娘的同居日常</p>
+                            <span class="text-muted-foreground">已完结</span>
+                            <span class="text-primary">18230</span>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="bg-card p-4 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-primary">连载新番</h2>
+            <ol class="list-decimal list-inside">
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">1</span>
+                        <img src="	https://lain.bgm.tv/pic/cover/l/d1/1c/443428_FIhFu.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">不时用德语小声说真心话的果实前同学</p>
+                            <span class="text-muted-foreground">09月=22:40</span>
+                            <span class="text-primary">72074</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">2</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/e4/dc/464376_NsZRw.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">败大女主太多了！</p>
+                            <span class="text-muted-foreground">07月=01:30</span>
+                            <span class="text-primary">41824</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">3</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/53/13/410346_z8j5n.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">关于我转生成为史莱姆这档事 第三季</p>
+                            <span class="text-muted-foreground">09月=23:10</span>
+                            <span class="text-primary">32263</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-4">
+                    <div class="flex items-center">
+                        <span class="font-bold">4</span>
+                        <img src="https://lain.bgm.tv/pic/cover/l/26/d6/425998_dnzr8.jpg" alt="Show Thumbnail" class="ml-2 rounded" style="width: 90px">
+                        <div class="ml-2">
+                            <p class="text-lg">关于我转生成为史莱姆这档事 第三季</p>
+                            <span class="text-muted-foreground">09月=23:10</span>
+                            <span class="text-primary">25857</span>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+    </div>
+    
+    
+    </div>
+    <script src="/static/js/3.4.js" th:href="@{/static/js/3.4.js}"></script>
+</body>
+
+</html>

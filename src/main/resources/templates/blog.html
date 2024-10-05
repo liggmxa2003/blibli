@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="cn" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="/static/css/typo.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+<!-- 导航栏 -->
+<nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <div class="ui inverted secondary menu">
+            <a href="#">
+                <img src="/static/images/LOGOpng.png" alt="" style="height: 80px; width: 180px;">
+            </a>
+            <a class="item" href="#"><i class="home icon"></i>首页</a>
+            <a class="item" href="#"><i class="tasks icon"></i>排行</a>
+            <a class="item" href="#"><i class="tags icon"></i>标签</a>
+            <a class="item" href="contact.html">联系</a>
+            <div class="right item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="搜索...">s
+                    <i class="search link icon"></i>
+                    </input>
+                </div>
+                <a class="item" href="#"><i class="user icon"></i>登录</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- 中间内容 -->
+<div id="waypoint" class="m-padded-tb-large">
+    <div class="ui container">
+        <div class="ui grid">
+            <div class=" wide column">
+                <!-- 博客列表 -->
+
+                <!-- 列表内容 -->
+                <div class="ui attached segment">
+                    <div class="ui container">
+
+                        <div class="ui top attached segment">
+                            <!-- 标题 -->
+                            <div class="ui horizontal link list">
+                                <div class="item">
+                                    <img src="https://lain.bgm.tv/pic/crt/l/8b/e3/156944_crt_1bKl1.jpg" alt=""
+                                         class="ui avatar image">
+                                    <div class="content"><a href="#" class="header">无彩限的怪灵世界</a></div>
+                                </div>
+                                <div class="item">
+                                    <i class="calendar times icon"></i>2024.12.24
+                                </div>
+                                <div class="item">
+                                    <i class="fire icon"></i>4448
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui attached segment">
+                            <div class="ui grid container">
+                                <!-- 图片 -->
+                                <div class="four wide column">
+                                    <img src="https://lain.bgm.tv/r/400/pic/cover/l/9c/4d/333158_qc7CC.jpg" alt=""
+                                         class="ui fluid rounded image" style="width: 190px;">
+                                </div>
+                                <div class="twelve wide column">
+                                    <!-- 内容 -->
+                                    <div class="ui right aligned basic segment">
+                                        <div class="ui pink label">日漫</div>
+                                    </div>
+                                    <h2 class="ui header"> 更衣人偶</h2>
+                                    <div id="content" class="typo typo-selection">
+                                        <p>制作着女儿节娃娃，以成为娃娃工匠为目标的男高中生五条新菜。
+                                            他专心一志地制作女儿娃娃，却也因此疏离的同世代的流行，迟迟无法融入班级。
+                                            对这样的新菜来说，总是身处班上团体的中心，大受欢迎的喜多川海梦就像是不同世界的人一样。
+                                            但就在某天，以意想不到的事情为契机，与海梦拥有了共同的秘密。
+                                            原以为两人绝对不会有交集的世界开始转动了起来。</p>
+                                    </div>
+                                    <div class="ui center  basic segment">
+                                        <button class="ui inverted pink circular button">收藏</button>
+                                        <button class="ui  pink circular button">播放</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui  attached positive message">
+                            <h2>更衣人偶</h2>
+                            <p>音乐: 中塚武<br>
+                                导演: 宫本武藏<br>
+                                人物设定: 石田一将
+                                系列构成: 冨田頼子
+                                美术监督: 根本洋行、小島あゆみ
+                                色彩设计: 山口舞
+                            </p>
+                        </div>
+                        <div class="ui  attached segment">
+                            <!-- 留言区 -->
+                            <div class="ui teal segment">
+                                <div class="ui form">
+                                    <div class="ui threaded comments">
+                                        <h3 class="ui dividing header">评论区</h3>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img
+                                                        src="https://lain.bgm.tv/r/400/pic/cover/l/37/81/234799_v8GWv.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">喜多川海夢</a>
+                                                <div class="metadata">
+                                                    <span class="date">Today at 5:42PM</span>
+                                                </div>
+                                                <div class="text">
+                                                    How artistic!
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="reply">回复</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img
+                                                        src="https://lain.bgm.tv/r/400/pic/cover/l/9c/4d/333158_qc7CC.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">五条新菜</a>
+                                                <div class="metadata">
+                                                    <span class="date">Yesterday at 12:30AM</span>
+                                                </div>
+                                                <div class="text">
+                                                    <p>This has been very useful for my research. Thanks as well!
+                                                    </p>
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="reply">回复</a>
+                                                </div>
+                                            </div>
+                                            <div class="comments">
+                                                <div class="comment">
+                                                    <a class="avatar">
+                                                        <img
+                                                                src="https://lain.bgm.tv/r/400/pic/cover/l/29/ab/365117_qQm4Q.jpg">
+                                                    </a>
+                                                    <div class="content">
+                                                        <a class="author">喜多川海夢</a>
+                                                        <div class="metadata">
+                                                            <span class="date">Just now</span>
+                                                        </div>
+                                                        <div class="text">
+                                                            Elliot you are always so right :
+                                                        </div>
+                                                        <div class="actions">
+                                                            <a class="reply">回复</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <a class="avatar">
+                                                <img
+                                                        src="https://lain.bgm.tv/r/400/pic/cover/l/9c/4d/333158_qc7CC.jpg">
+                                            </a>
+                                            <div class="content">
+                                                <a class="author">五条新菜</a>
+                                                <div class="metadata">
+                                                    <span class="date">5 days ago</span>
+                                                </div>
+                                                <div class="text">
+                                                    Dude, this is awesome. Thanks so much
+                                                </div>
+                                                <div class="actions">
+                                                    <a class="reply">回复</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui form">
+                                            <!-- 评论区 -->
+                                            <div class="field">
+                                                <textarea name="content" placeholder="请输入评论内容...."></textarea>
+                                            </div>
+                                            <div class="fields">
+                                                <div class="field">
+                                                    <div class="ui left icon input">
+                                                        <i class="user icon"></i>
+                                                        <input type="text" name="nickname" placeholder="请输入昵称">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <div class="ui left icon input">
+                                                        <i class="mail icon"></i>
+                                                        <input type="text" name="nickname" placeholder="请输入邮箱">
+                                                    </div>
+                                                </div>
+                                                <div class="field">
+                                                    <button class="ui teal button"><i class="edit icon"></i>
+                                                        评论
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 列表底部 -->
+                    <div class="ui bottom attached segment">
+                        <div class="ui middle aligned two column grid">
+                            <div class="column">
+                                <a href="" class="ui pink basic button">上一页</a>
+                            </div>
+                            <div class="right aligned column ">
+                                <a href="" class="ui pink basic button">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 底部内容 -->
+<footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <div class="ui inverted divided stackable grid">
+            <div class="three wide column">
+                <div class="ui inverted link list">
+                    <div class="item">
+                        <img src="https://lain.bgm.tv/pic/cover/c/59/8d/90880_NYUDd.jpg"
+                             th:src="@{/images/wechat.jpg}" class="ui rounded image" alt="" style="width: 80px">
+                    </div>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                    <a href="#" class="item m-text-thin">用户故事（User Story）</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
+                <div class="ui inverted link list">
+                    <a href="#" class="item m-text-thin">Email：xxxxxxxxx</a>
+                    <a href="#" class="item m-text-thin">QQ：xxxxxxxxx</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced ">Ligg</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">
+                    、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...
+                </p>
+            </div>
+        </div>
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017</p>
+    </div>
+</footer>
+<div id="toolbar" class="ui vertical icon buttons m-fixed m-right-bottom" style="display: none">
+    <a href="#" class="ui icon button"><i class="chevron up icon"></i> </a>
+    <button href="" class="ui teal button">目录</button>
+    <button href="" class="ui teal button">留言</button>
+</div>
+<!--/*/<th:block>/*/-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+<script src="/static/lib/waypoints/jquery.waypoints.min.js" th:src="@{lib/waypoints/jquery.waypoints.min.js}"></script>
+<!--/*/</th:block>/*/-->
+<script>
+    var waypoint = new Waypoint({
+        element: document.getElementById('waypoint'),
+        handler: function (direction) {
+            if (direction == 'down') {
+                $('#toolbar').show(500);
+            } else {
+                $('#toolbar').hide(500);
+            }
+            console.log('Scrolled to waypoint!' + direction)
+        }
+    })
+</script>
+</body>
+
+</html>

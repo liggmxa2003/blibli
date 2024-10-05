@@ -1,0 +1,68 @@
+body{
+    background: url("https://pics0.baidu.com/feed/83025aafa40f4bfb38b975a84ea27cfef53618d8.jpeg?token=40d866aa68b0d26717b67c75c53731e7");
+}
+.m-padded-mini{
+    padding:0.5em !important;
+}
+.m-padded-tb-mini{
+    padding-top:0.2em !important;
+    padding-bottom:0.2em;
+
+}
+.m-padded-tb-tiny{
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.m-padded-tb-massive{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+/* 布局 */
+.m-fixed {
+   position: fixed !important;
+   z-index: 10 !important; 
+}
+.m-right-bottom {
+   bottom: 0 !important;
+   right: 0 !important;
+}
+
+/* test */
+.m-texr-thin {
+    font-weight: 300 !important;
+}
+.m-texr-spaced {
+    letter-spacing: 1px !important;
+}
+.m-texr-lined {
+    line-height: 1.8;
+}
+.m-opacity-mini {
+    opacity: 0.8 !important;
+}
+
+
+.m-inline-block{
+    display: inline-block !important;;
+}
+    

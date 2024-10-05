@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="cn" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+
+<body>
+<!-- 导航栏 -->
+<nav th:replace="_fragments :: menu(1)" class="ui inverted attached segment m-padded-tb-mini">
+<!--    <div class="ui container">-->
+<!--        <div class="ui inverted secondary menu">-->
+<!--            <a href="#">-->
+<!--                <img src="/static/images/LOGOpng.png" th:src="@{images/LOGOpng.png}" alt=""-->
+<!--                     style="height: 80px; width: 180px;">-->
+<!--            </a>-->
+<!--            <a class="action item" href="#"><i class="home icon"></i>首页</a>-->
+<!--            <a class="item" href="#"><i class="tasks icon"></i>排行</a>-->
+<!--            <a class="item" href="#"><i class="tags icon"></i>标签</a>-->
+<!--            <a class="item" href="contact.html">联系</a>-->
+<!--            <div class="right item">-->
+<!--                <div class="ui icon input">-->
+<!--                    <input type="text" placeholder="搜索...">-->
+<!--                    <i class="search link icon"></i>-->
+<!--                    </input>-->
+<!--                </div>-->
+<!--                <a class="item" href="#"><i class="user icon"></i>登录</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+</nav>
+
+
+<!-- 中间内容 -->
+<div class="m-padded-tb-large">
+    <div class="ui container">
+        <div class="ui grid">
+            <div class="eleven wide column">
+                <!-- 博客列表 -->
+                <div class="ui top attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h2 class="ui pink header">番剧</h2>
+                        </div>
+                        <div class="right aligned column ">
+                            共<h3 class="ui orange header m-inline-block">10</h3>叶
+                        </div>
+                    </div>
+                </div>
+                <!-- 列表内容 -->
+                <div class="ui attached segment">
+                    <div class="ui padded vertical segment">
+                        <div class="ui grid">
+                            <div class="eleven wide column">
+                                <h3 class="ui header">用户故事（User Story）</h3>
+                                <p class="m-text-thin m-text-spaced m-opacity-mini">某个大陆的、某个时代。
+                                    大陆南北分割的战争结束了，世界逐渐走向了和平。
+                                    在战争中、作为军人而战斗的薇尔莉特·伊芙加登离开了军队，来到了大港口城市。怀抱着战场上一个对她而言比谁都重要的人告诉了她“某个话语”――。
+                                    街道上人群踊跃，有轨电车在排列着煤气灯的马路上穿梭着。薇尔莉特在街道上找到了“代写书信”的工作。那是根据委托人的想法来组织出相应语言的工作。
+                                    她直面着委托人、触碰着委托人内心深处的坦率感情。与此同时，薇尔莉特在记录书信时，那一天所告知的那句话的意思也逐渐接近了。</p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+
+                                    </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label" m-padded-mini>播放</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="https://lain.bgm.tv/pic/cover/c/52/7b/242216_kNqWl.jpg" alt=""
+                                         class="ui rounded image">
+                                </a>
+                                <div class="item">
+                                    <i class="eye fire icon">4548486</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui padded vertical segment">
+                        <div class="ui grid">
+                            <div class="eleven wide column">
+                                <h3 class="ui header">用户故事（User Story）</h3>
+                                <p class="m-text-thin m-text-spaced m-opacity-mini">
+                                    暁佳奈の人気ライトノベルを原作とする京都アニメーション制作のTVアニメ「ヴァイオレット・エヴァーガーデン」の外伝作品。感情を持たない元軍人の少女ヴァイオレットが、手紙を代筆する“自動手記人形”の仕事を通して様々な人たちの想いと向き合い、愛の意味を知っていく姿を繊細な映像表現で綴るファンタジー群像劇。本作では、生きることに絶望していた新たな依頼主の少女イザベラとの物語が描かれる。監督はTVシリーズでシリーズ演出を手がけた藤田春香。2019年9月に3週間限定で劇場上映を実施。
+
+                                    ……大切なものを守るのと引き換えに僕は、僕の未来を売り払ったんだ。
+                                    良家の子女のみが通うことを許される女学校。
+                                    父親と「契約」を交わしたイザベラ・ヨークにとって、
+                                    白椿が咲き誇る美しいこの場所は牢獄そのもので……。</p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+
+                                    </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label" m-padded-mini>播放</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="https://lain.bgm.tv/pic/cover/c/f0/15/280837_L6VeG.jpg" alt=""
+                                         class="ui rounded image">
+                                </a>
+                                <div class="item">
+                                    <i class="eye fire icon">4548486</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui padded vertical segment">
+                        <div class="ui grid">
+                            <div class="eleven wide column">
+                                <h3 class="ui header">用户故事（User Story）</h3>
+                                <p class="m-text-thin m-text-spaced m-opacity-mini">
+                                    堀京子既是美人又成绩优秀，在学校是班上的中心。但实际上，她代替忙碌的双亲，在放学后直接回家，专注于家务和照顾年幼的弟弟，是个持家型的高中生。某天，受伤的弟弟创太被陌生的男性送回了堀的家里。
+                                    “堀同学”被这样称呼后和他交谈才发现，他实际上是自己的同班同学——班上头号人气女子与阴沉男子相遇后会怎样！？
+                                    恋爱、友情。充满青春气息的超微碳酸系校园生活，就此开幕！</p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column">
+
+                                    </div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label" m-padded-mini>播放</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <a href="#" target="_blank">
+                                    <img src="https://lain.bgm.tv/pic/cover/c/75/b2/425992_kV5CF.jpg" alt=""
+                                         class="ui rounded image">
+                                </a>
+                                <div class="item">
+                                    <i class="eye fire icon">4548486</i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 列表底部 -->
+                <div class="ui bottom attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <a href="" class="ui pink basic button">上一页</a>
+                        </div>
+                        <div class="right aligned column ">
+                            <a href="" class="ui pink basic button">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右边栏 -->
+            <div class="five wide column">
+                <!--分类-->
+                <div class="ui segments ">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>分类
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" th:href="@{types/-1}" target="_blank">more <i
+                                        class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui blue segment ">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                               th:each="type : ${types}">
+                                <span th:text="${type.name}">学习日志</span>
+                                <div class="ui blue basic left pointing label"
+                                     th:text="${#arrays.length(type.blogs)}">13
+                                </div>
+                            </a>
+                            <!--/*-->
+                            <a href="#" class="item">
+                                思考与感悟
+                                <div class="ui blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                               th:each="type : ${types}">
+                                <span th:text="${type.name}">学习日志</span>
+                                <div class="ui blue basic left pointing label"
+                                     th:text="${#arrays.length(type.blogs)}">13
+                                </div>
+                            </a>
+                            <!--/*-->
+                            <a href="#" class="item">
+                                思考与感悟
+                                <div class="ui blue basic left pointing label">13</div>
+                            </a>
+                            <!--*/-->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ui segments ">
+                    <div class="ui secondary segment">
+                        <div class="ui two column grid">
+                            <div class="column">
+                                <i class="idea icon"></i>分类
+                            </div>
+                            <div class="right aligned column">
+                                <a href="#" th:href="@{types/-1}" target="_blank">more <i
+                                        class="angle double right icon"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui blue segment ">
+                        <div class="ui fluid vertical menu">
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                               th:each="type : ${types}">
+                                <span th:text="${type.name}">学习日志</span>
+                                <div class="ui blue basic left pointing label"
+                                     th:text="${#arrays.length(type.blogs)}">13
+                                </div>
+                            </a>
+                            <!--/*-->
+                            <a href="#" class="item">
+                                思考与感悟
+                                <div class="ui blue basic left pointing label">13</div>
+                            </a>
+                            <a href="#" th:href="@{/types/{id}(id=${type.id})}" target="_blank" class="item"
+                               th:each="type : ${types}">
+                                <span th:text="${type.name}">学习日志</span>
+                                <div class="ui blue basic left pointing label"
+                                     th:text="${#arrays.length(type.blogs)}">13
+                                </div>
+                            </a>
+                            <!--/*-->
+                            <a href="#" class="item">
+                                思考与感悟
+                                <div class="ui blue basic left pointing label">13</div>
+                            </a>
+                            <!--*/-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 推荐 -->
+                <div class="ui segments">
+                    <div class="ui secondary segment">
+                        <i class="bookmark icon"></i>最新推荐
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank"></a>最新推荐
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank"></a>最新推荐
+                    </div>
+                    <div class="ui segment">
+                        <a href="#" target="_blank"></a>最新推荐
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 底部内容 -->
+    <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+<!--        <div class="ui center aligned container">-->
+<!--            <div class="ui inverted divided stackable grid">-->
+<!--                <div class="three wide column">-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <div class="item">-->
+<!--                            <img src="https://lain.bgm.tv/pic/cover/c/59/8d/90880_NYUDd.jpg" alt="" style="width: 80px">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="three wide column">-->
+<!--                    <h4 class="ui inverted header m-text-thin m-text-spaced ">最新博客</h4>-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>-->
+<!--                        <a href="#" class="item m-text-thin">用户故事（User Story）</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="three wide column">-->
+<!--                    <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>-->
+<!--                    <div class="ui inverted link list">-->
+<!--                        <a href="#" class="item m-text-thin">Email：xxxxxxxxx</a>-->
+<!--                        <a href="#" class="item m-text-thin">QQ：xxxxxxxxx</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="seven wide column">-->
+<!--                    <h4 class="ui inverted header m-text-thin m-text-spaced ">Ligg</h4>-->
+<!--                    <p class="m-text-thin m-text-spaced m-opacity-mini">-->
+<!--                        、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="ui inverted section divider"></div>-->
+<!--            <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017</p>-->
+<!--        </div>-->
+    </footer>
+    <!--/*/<th:block>/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+</div>
+</body>
+</html>

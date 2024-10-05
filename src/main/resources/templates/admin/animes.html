@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script><!--引入看板娘-->
+</head>
+
+<body>
+<!-- 导航栏 -->
+<nav th:replace="admin/_fragments :: menu(1)"></nav>
+
+<nav>
+    <div class="ui attached pointing menu">
+        <div class="ui container">
+            <a href="" class="item">发布</a>
+            <a href="" class="teal active item">列表</a>
+        </div>
+    </div>
+</nav>
+
+
+<div class="m-padded-tb-large">
+    <div class="ui container">
+        <div class="ui grid">
+            <div class=" wide column">
+                <!-- 中间内容 -->
+                <form  method="post" class="ui segment form">
+
+                    <!--fields代表一个区域,inline缩短区域的效果-->
+                    <div class="inline fields">
+                        <div class="field">
+                            <input type="text" name="title" placeholder="标题">
+                        </div>
+                        <div class="field">
+                            <!--dropdown是下拉框效果-->
+                            <div class="ui labeled action input">
+                                <div class="ui type selection dropdown">
+                                    <input type="hidden" name="typeId">
+                                    <i class="dropdown icon"></i>
+                                    <div class="default text">分类</div>
+                                    <!--menu是菜单-->
+                                    <div class="menu">
+                                        <div th:each="type : ${types}" th:data-value="${type.id}"
+                                             th:text="${type.name}" class="item" data-value="1">错误日志
+                                        </div>
+                                        <div th:each="type : ${types}" th:data-value="${type.id}"
+                                             th:text="${type.name}" class="item" data-value="2">开发者
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <button id="clear-btn" class="ui compact button">clear</button> -->
+                            </div>
+
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" id="recommend" name="recommend">
+                                <label for="recommend">推荐</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <button type="button" id="search-btn" class="ui mini teal basic button"><i
+                                    class="search icon"></i>搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <table class="ui table">
+                    <thead></thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>标题</th>
+                        <th>类型</th>
+                        <th>推荐</th>
+                        <th>更新时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>清单</td>
+                        <td>升级</td>
+                        <td>是</td>
+                        <td>2024-9-1</td>
+                        <td>
+                            <a href="#" class="ui mini teal  button"><i class="edit icon"></i>编辑</a>
+                            <a href="#" class="ui mini red  button"><i class="trash icon"></i>删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th colspan="6">
+                            <div class="ui right  pagination menu">
+                                <a href="" class="item">上一页</a>
+                                <a href="" class="item">下一页</a>
+                            </div>
+                            <a href="#" class="ui  right floated teal basic button">添加</a>
+                        </th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- 底部内容 -->
+    <footer th:replace="admin/_fragments :: footer">
+    </footer>
+
+    <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.js"></script>
+    <!--/*/</th:block>/*/-->
+
+    <script>
+        $('.ui.dropdown').dropdown({on: 'hover'});
+    </script>
+</body>
+
+</html>
