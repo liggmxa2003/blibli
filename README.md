@@ -6,5 +6,4 @@
 | ---------- | ---------- |
 |      semantic-ui      |   springboot         |
 |     thymeleaf       |  mybatis          |
-|      prism      |  druid          |
-|      editormd      |  quartz          |
+
