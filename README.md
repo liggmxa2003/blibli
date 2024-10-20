@@ -24,13 +24,13 @@
 - 修改配置文件
   *配置全局文件*
 
-  <img width="100" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
+  <img width="150" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
   
 
 
 设置配置文件中的数据库信息，将数据库连接地址、usrname(账号)、password(密码)、设置成本地自己的*
 
-<img width="100" src="./src/main/resources/static/images/introduce/设置配置文件.png" alt="subject-dark"/>
+<img width="150" src="./src/main/resources/static/images/introduce/设置配置文件.png" alt="subject-dark"/>
 
 - 启动项目
 
