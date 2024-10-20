@@ -1,5 +1,5 @@
 # blibli
-###### 基于springboot+mybatis开发的动漫发布网站基于springboot+mybatis开发的动漫发布网站
+###### 基于springboot+mybatis开发的动漫发布网站
 
 **开发环境**
 1. 编程软件：[IntelliJ IDEA 2023.3.6](https://www.jetbrains.com/help/idea/2023.3/managing-plugins.html?preferences.pluginManager&utm_source=product&utm_medium=link&utm_campaign=IU&utm_content=2023.3 "IntelliJ IDEA 2023.3.6") (22版本一下可能启动不了项目)
