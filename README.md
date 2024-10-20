@@ -24,7 +24,7 @@
 - 修改配置文件
   *配置全局文件*
 
-  <img width="150" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
+<img width="150" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
   
 
 
