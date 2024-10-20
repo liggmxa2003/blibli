@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwz.dao.TypeDao">
+
+
+    <select id="getType" resultType="com.lwz.pojo.Type">
+        select id,name from t_type where id = #{id}
+    </select>
+
+    <insert id="saveType" parameterType="com.lwz.pojo.Type">
+        insert into t_type values (#{id},#{name});
+    </insert>
+
+    <!--两个id可能会相冲，取别名即可-->
+    <resultMap id="type" type="com.lwz.pojo.Type">
+        <id property="id" column="tid"/>
+        <result property="name" column="name"/>
+        <collection property="blogs" ofType="com.lwz.pojo.Anime">
+            <id property="id" column="bid"/>
+            <result property="title" column="title"/>
+            <result property="typeId" column="type_id"/>
+        </collection>
+    </resultMap>
+
+    <select id="getBlogType" resultMap="type">
+        select t.id tid, t.name, b.id bid, b.title, b.type_id
+        from t_type t, t_anime b
+        where t.id = b.type_id
+    </select>
+
+
+    <select id="getAllType" resultType="com.lwz.pojo.Type">
+        select * from t_type
+    </select>
+
+    <select id="getTypeByName" resultType="com.lwz.pojo.Type">
+        select * from t_type where name = #{name}
+    </select>
+
+    <delete id="deleteType" >
+        delete from t_type where id = #{id}
+    </delete>
+
+    <update id="updateType" parameterType="com.lwz.pojo.Type">
+        update t_type set name = #{name} where id = #{id};
+    </update>
+
+</mapper>
