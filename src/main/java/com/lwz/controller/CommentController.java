@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
 
+//用于处理评论相关业务
 @Controller
 public class CommentController {
 
@@ -39,6 +40,7 @@ public class CommentController {
         comment.setBlog(blogService.getDetailedBlog(blogId));  //绑定番剧与评论
         comment.setBlogId(blogId);
         User user = (User) session.getAttribute("user");
+        //暂时无用
         if (user != null){   //用户为管理员
             comment.setAvatar(user.getAvatar());
             comment.setAdminComment(true);

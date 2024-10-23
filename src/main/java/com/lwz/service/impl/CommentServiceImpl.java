@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
+//评论业务层
 @Service
 public class CommentServiceImpl implements CommentService {
 

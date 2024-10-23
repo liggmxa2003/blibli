@@ -2,7 +2,7 @@
 ###### 基于springboot+mybatis开发的动漫发布网站基于springboot+mybatis开发的动漫发布网站
 
 **开发环境**
-1. 编程软件：[IntelliJ IDEA 2023.3.6](https://www.jetbrains.com/help/idea/2023.3/managing-plugins.html?preferences.pluginManager&utm_source=product&utm_medium=link&utm_campaign=IU&utm_content=2023.3 "IntelliJ IDEA 2023.3.6") (22版本一下可能启动不了项目)
+1. 编程软件：[IntelliJ IDEA 2023.3.6](https://www.jetbrains.com/help/idea/2023.3/managing-plugins.html?preferences.pluginManager&utm_source=product&utm_medium=link&utm_campaign=IU&utm_content=2023.3 "IntelliJ IDEA 2023.3.6")
 2. JDK：[jdk17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html "jdk17")
 3. Springboot版本： [2.2.5](https://start.spring.io/ "2.2.5")
 4. mybatis [2.1.1](https://mybatis.net.cn/ "2.1.1")
@@ -14,6 +14,24 @@
 |      semantic-ui      |   springboot         |
 |     thymeleaf       |  mybatis          |
 
+## 功能/开发计划
+
+- [x] 后台登录
+- [x] 后台视频发布/编辑
+- [x] 后台分类发布/编辑
+- [x] 后台标签发布/编辑
+- [x] user注销
+- [x] 前端首页内容展示
+- [x] 番剧详情页
+- [x] 番剧评论
+- [x] 番剧视频页展示
+- [x] 分类/标签也展示与关联
+- [x] 介绍页面设计
+- [ ] 评论回复功能
+- [ ] 管理员/普通用户登录
+- [ ] 用户编辑个人信息功能
+- [ ] 页面UI美化
+
 **本地部署步骤**
 
 - 创建mysql数据库
@@ -24,13 +42,14 @@
 - 修改配置文件
   *配置全局文件*
 
-  <img width="100" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
+
+<img width="150" src="./src/main/resources/static/images/introduce/配置文件.png" alt="subject-dark"/>
   
 
 
 设置配置文件中的数据库信息，将数据库连接地址、usrname(账号)、password(密码)、设置成本地自己的*
 
-<img width="100" src="./src/main/resources/static/images/introduce/设置配置文件.png" alt="subject-dark"/>
+<img width="150" src="./src/main/resources/static/images/introduce/设置配置文件.png" alt="subject-dark"/>
 
 - 启动项目
 
@@ -45,3 +64,7 @@
 
 #### 分类、标签、动态、
 <img width="150" src="./src/main/resources/static/images/introduce/分类.png" alt="subject-dark"/><img width="150" src="./src/main/resources/static/images/introduce/详情页.png" alt="subject-dark"/><img width="150" src="./src/main/resources/static/images/introduce/更新动态.png" alt="subject-dark"/>
+
+## 后台页面
+<img width="150" src="./src/main/resources/static/images/introduce/分类.png" alt="视频管理"/><img width="150" src="./src/main/resources/static/images/introduce/视频发布页.png" alt="subject-dark"/><img width="150" src="./src/main/resources/static/images/introduce/分类管理.png" alt="subject-dark"/>
+<img width="150" src="./src/main/resources/static/images/introduce/标签管理.png" alt="subject-dark"/>

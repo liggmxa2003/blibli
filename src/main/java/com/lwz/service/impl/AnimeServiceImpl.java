@@ -106,19 +106,26 @@ public class AnimeServiceImpl implements AnimeService {
         return 1;
     }
 
-    @Override   //编辑番剧
+    //编辑番剧
+    @Override
     public int updateBlog(Anime blog) {
+        // 更新番剧的修改时间
         blog.setUpdateTime(new Date());
-        //将标签的数据存到t_blogs_tag表中
+        /**
+         * 将番剧关联的标签信息保存到数据库的t_blogs_tag表中
+         * 这一步是必要的，因为番剧和标签之间是多对多关系，需要通过中间表来维护它们的关联
+         */
         List<Tag> tags = blog.getTags();
         AnimeAndTag blogAndTag = null;
         for (Tag tag : tags) {
             blogAndTag = new AnimeAndTag(tag.getId(), blog.getId());
             blogDao.saveBlogAndTag(blogAndTag);
         }
+        // 调用DAO层的方法来更新番剧信息
         return blogDao.updateBlog(blog);
     }
 
+//    删除指定ID的番剧
     @Override
     public int deleteBlog(Long id) {
         return blogDao.deleteBlog(id);

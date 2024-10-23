@@ -9,7 +9,7 @@ public interface AnimeService {
 
     Anime getBlog(Long id);  //后台展示番剧
 
-    Anime getDetailedBlog(Long id);  //前端展示番剧
+    Anime getDetailedBlog(Long id);  //详情页展示番剧
 
     List<Anime> getAllBlog();
 

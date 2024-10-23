@@ -110,6 +110,7 @@ public class AnimeController {
         return "redirect:/admin/blogs"; //重定向到后台显示番剧列表
     }
 
+//    删除指定ID的番剧文章
     @GetMapping("/blogs/{id}/delete")
     public String deleteBlogs(@PathVariable Long id, RedirectAttributes attributes){
         blogService.deleteBlog(id);

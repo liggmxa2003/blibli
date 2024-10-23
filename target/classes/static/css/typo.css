@@ -328,3 +328,10 @@
 .typo img {
   max-width: 100%;
 }
+.ui.menu .item.active {
+  border-bottom: 3px solid #f25482; /* 下划线颜色 */
+  color: #f25482 !important; /* 激活项的颜色 */
+}
+.ui.menu .item {
+  font-size: 18px;
+}

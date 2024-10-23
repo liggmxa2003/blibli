@@ -49,15 +49,16 @@
 <nav th:fragment="menu(n)" class="ui inverted attached segment m-padded-tb-mini">
   <div class="ui container">
     <div class="ui inverted secondary menu">
-      <a href="#">
+      <a href="#" th:href="@{/}">
         <img src="/images/LOGOpng.png" th:src="@{/images/LOGOpng.png}" alt=""
              style="height: 80px; width: 180px;">
       </a>
       <a class="action item" href="#"  th:href="@{/}" th:classappend="${n==1} ? 'active'"><i class="home icon"></i>首页</a>
-      <a class="item" href="#" th:href="@{/types/-1}" th:classappend="${n==2} ? 'active'"><i class="tasks icon"></i>分类</a>
-      <a class="item" href="#" th:href="@{/tags/-1}" th:classappend="${n==3} ? 'active'"><i class="video icon"></i>标签</a>
-      <a href="#"  th:href="@{/archives}" class="m-item orange item m-mobile-hide" th:classappend="${n==4}?'active'"><i class=" clone icon"></i>更新动态</a>
-      <a class="item" href="#" th:classappend="${n==5} ? 'active'">关于</a>
+      <a class="item" href="#"  th:href="@{/video}" th:classappend="${n==2} ? 'active'"><i class="video icon"></i>番剧</a>
+      <a class="item" href="#" th:href="@{/types/-1}" th:classappend="${n==3} ? 'active'"><i class="tasks icon"></i>分类</a>
+      <a class="item" href="#" th:href="@{/tags/-1}" th:classappend="${n==4} ? 'active'"><i class="tags icon"></i>标签</a>
+      <a href="#"  th:href="@{/archives}" class="item m-item  item m-mobile-hide" th:classappend="${n==5}?'active'"><i class="hourglass half icon"></i>更新动态</a>
+      <a class="item" href="#" th:href="@{/introduce}" th:classappend="${n==6} ? 'active'"><i class="bullhorn icon"></i>关于</a>
       <div class="right item">
         <form name="search" action="#" method="get" th:action="@{/search}" target="_blank">
           <div class="ui icon input" th:action="@{/search}" target="_blank">
@@ -66,7 +67,7 @@
             </input>
           </div>
         </form>
-        <a class="item" href="#" th:href="@{/admin}"><i class="user icon"></i>登录</a>
+        <a class="item" href="#" th:href="@{/admin/index}"><i class="user icon"></i>登录</a>
       </div>
     </div>
   </div>

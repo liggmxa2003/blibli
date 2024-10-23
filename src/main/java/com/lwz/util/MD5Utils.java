@@ -3,6 +3,7 @@ package com.lwz.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+//密码加密暂时未使用
 public class MD5Utils {
 
     /**

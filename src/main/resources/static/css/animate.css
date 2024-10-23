@@ -1579,8 +1579,23 @@
 }
 .anime-border {
   /*border: 5px solid #ff69b4; !* 粉红色边框 *!*/
-  box-shadow: 0 0 10px rgba(255, 105, 180, 0.8); /* 粉红色阴影 */
-  padding: 5px;
+  box-shadow: 0 0 7px rgba(255, 105, 180, 0.8); /* 粉红色阴影 */
+  padding: 4px;
   border-radius: 10px; /* 圆角 */
   background: linear-gradient(135deg, #ff69b4, #ff1493); /* 渐变背景 */
+}
+.ui.menu .item.active {
+  border-bottom: 3px solid #f25482; /* 下划线颜色 */
+  color: #f25482 !important; /* 激活项的颜色 */
+}
+.ui.menu .item {
+  font-size: 18px;
+}
+/*图片放大效果*/
+.hover-zoom {
+  transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.2);
 }

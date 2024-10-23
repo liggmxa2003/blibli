@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lwz.dao.AinmeDao">
 
-    <resultMap id="blog" type="com.lwz.pojo.Anime">
+<!--     定义一个名为"anime"的结果映射，映射到"com.lwz.pojo.Anime"类 -->
+    <resultMap id="anime" type="com.lwz.pojo.Anime">
         <id property="id" column="id"/>
         <result property="title" column="title"/>
         <result property="content" column="content"/>
@@ -41,11 +42,12 @@
         </collection>
     </resultMap>
 
+<!--    删除指定ID的番剧文章-->
     <delete id="deleteBlog">
         delete from t_anime where id = #{id}
     </delete>
 
-    <select id="getIndexBlog" resultMap="blog">  /*主页番剧展示*/
+    <select id="getIndexBlog" resultMap="anime">  /*主页番剧展示*/
         select b.id, b.title, b.first_picture, b.views, b.update_time, b.description,
         t.name typename, t.id typeid,
         u.nickname, u.avatar
@@ -53,22 +55,24 @@
         where b.type_id = t.id and  u.id = b.user_id order by b.update_time desc
     </select>
 
-    <select id="getAllBlog" resultMap="blog">  /*后台番剧展示*/
+    <select id="getAllBlog" resultMap="anime">  /*后台番剧展示*/
         select b.id, b.title, b.update_time, b.recommend, b.type_id, b.published,
                t.id typeid, t.name typename
         from  t_anime b, t_type t
         where b.type_id = t.id    /*番剧类型id=类型id*/
     </select>
 
-    <select id="getByTypeId" resultMap="blog">
+    <!--    根据类型ID获取动漫信息的查询语句-->
+    <select id="getByTypeId" resultMap="anime">
         select b.id, b.title, b.first_picture, b.views, b.update_time, b.description,
         t.name typename, t.id typeid,
         u.nickname, u.avatar
         from  t_anime b, t_type t, t_user u
-        where b.type_id = t.id and u.id = b.user_id and b.type_id = #{typeId} order by b.update_time desc
+        where b.type_id = t.id and u.id = b.user_id and b.type_id = #{typeId}
+        order by b.update_time desc
     </select>
-
-    <select id="getByTagId" resultMap="blog">
+    <!--     根据标签ID查询动漫信息   -->
+    <select id="getByTagId" resultMap="anime">
         select b.id, b.title, b.first_picture, b.views, b.update_time, b.description,
         t.name typename, t.id typeid,
         t1.name tagname, t1.id tagid,
@@ -78,18 +82,19 @@
         order by b.update_time desc
     </select>
 
-    <select id="getAllRecommendBlog" resultMap="blog">
+    <!--    查询所有推荐的动漫番剧信息，并按照更新时间降序排序，暂时废弃。-->
+    <select id="getAllRecommendBlog" resultMap="anime">
         select id, title, recommend from  t_anime order by update_time desc;
     </select>
 
-    <select id="getBlog" resultMap="blog"> /*后台展示番剧*/
+    <select id="getBlog" resultMap="anime"> /*后台展示番剧*/
         select b.id, b.published, b.flag, b.title, b.content, b.type_id,
          b.tag_ids, b.first_picture, b.description, b.recommend,
          b.share_statement, b.appreciation, b.commentabled
         from  t_anime b  where  b.id = #{id};
     </select>
 
-    <select id="getDetailedBlog" resultMap="blog" parameterType="com.lwz.pojo.Anime">  /*番剧详情*/
+    <select id="getDetailedBlog" resultMap="anime" parameterType="com.lwz.pojo.Anime">  /*番剧详情*/
         select b.id, b.first_picture, b.flag, b.title, b.content, b.views,
         b.update_time,b.commentabled, b.share_statement, b.appreciation,
         u.nickname, u.avatar,
@@ -98,8 +103,18 @@
         where b.user_id = u.id and tb.anime_id = b.id and tb.tag_id = tag.id and  b.id = #{id}
     </select>
 
-    <select id="getSearchBlog" resultMap="blog">
+    <!-- 定义一个名为getSearchBlog的查询语句，用于搜索番剧 -->
+    <select id="getSearchBlog" resultMap="anime">
+        <!-- 绑定一个名为pattern的变量，用于构建模糊查询的模式 -->
         <bind name="pattern" value="'%' + query + '%'" />
+        <!--
+            执行SQL查询，选择番剧的id、标题、首图、浏览量、更新时间、描述，
+            类型名称，用户昵称和头像
+            从番剧表t_anime、类型表t_type和用户表t_user中
+            条件是番剧的类型ID等于类型的ID并且用户的ID等于番剧的用户ID
+            并且番剧的标题或内容匹配模糊查询模式
+            结果按更新时间降序排序
+        -->
         select b.id, b.title, b.first_picture, b.views, b.update_time, b.description,
         t.name typename,
         u.nickname, u.avatar
@@ -108,7 +123,7 @@
         order by b.update_time desc
     </select>
 
-    <select id="searchAllBlog" parameterType="com.lwz.pojo.Anime" resultMap="blog">
+    <select id="searchAllBlog" parameterType="com.lwz.pojo.Anime" resultMap="anime">
         <bind name="pattern" value="'%' + title + '%'" />    /*模糊查询*/
         select b.id, b.title, b.update_time, b.recommend, b.published, b.type_id, t.id, t.name
         from  t_anime b ,t_type t
@@ -148,16 +163,18 @@
         #{updateTime}, #{typeId}, #{tagIds}, #{userId}, #{description});
     </insert>
 
+<!--    MyBatis插入映射语句，用于保存番剧和标签的关联信息-->
     <insert id="saveBlogAndTag" parameterType="com.lwz.pojo.AnimeAndTag">
         insert into  t_anime_tags (tag_id, anime_id) values (#{tagId},#{blogId});
     </insert>
 
-
+<!--    查询并返回t_anime表中按更新时间降序排列的年份-->
     <select id="findGroupYear" resultType="String">
         select DATE_FORMAT(b.update_time, '%Y') from  t_anime b order by b.update_time desc
     </select>
 
-    <select id="findByYear" resultMap="blog">
+<!--    根据年份查询动画信息-->
+    <select id="findByYear" resultMap="anime">
         select b.title, b.update_time, b.id, b.flag
         from  t_anime b
         where DATE_FORMAT(b.update_time, "%Y") = #{year}

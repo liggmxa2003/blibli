@@ -8,7 +8,12 @@
 <body class="type-bg">
 
   <!--导航-->
-  <nav  th:replace="_fragments :: menu(2)"></nav>
+  <nav  th:replace="_fragments :: menu(3)"></nav>
+
+  <div class="header-section">
+    <h1>分类推荐</h1>
+    <p>新鲜热播好剧</p>
+  </div>
 
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-big animated fadeIn">
@@ -48,9 +53,10 @@
                     <div class="item">
                       <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2020-3-02</span>
                     </div>
-                    <div class="item">
-                      <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
-                    </div>
+<!--                    浏览次数-->
+<!--                    <div class="item">-->
+<!--                      <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="right aligned five wide column">
@@ -71,16 +77,16 @@
       </div>
 
       <!--footer-->
-      <div class="ui bottom attached segment" >
-        <div class="ui middle aligned two column grid">
-          <div class="column">
-            <div class="item"><a class="ui mini purple basic button" th:href="@{/(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a></div>
-          </div>
-          <div class="right aligned column">
-            <div class="item"><a class="ui mini purple basic button" th:href="@{/(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a></div>
-          </div>
-        </div>
-      </div>
+<!--      <div class="ui bottom attached segment" >-->
+<!--        <div class="ui middle aligned two column grid">-->
+<!--          <div class="column">-->
+<!--            <div class="item"><a class="ui mini purple basic button" th:href="@{/(pageNum=${pageInfo.hasPreviousPage}?${pageInfo.prePage}:1)}">上一页</a></div>-->
+<!--          </div>-->
+<!--          <div class="right aligned column">-->
+<!--            <div class="item"><a class="ui mini purple basic button" th:href="@{/(pageNum=${pageInfo.hasNextPage}?${pageInfo.nextPage}:${pageInfo.pages})}">下一页</a></div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
       <div class="ui segment m-inline-block">
         <p >当前第<span th:text="${pageInfo.pageNum}"></span>页，总<span th:text="${pageInfo.pages}"></span>页，共<span th:text="${pageInfo.total}"></span>条记录</p>

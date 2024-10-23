@@ -120,11 +120,11 @@
                             th:text="${pageInfo.total}"></span>条记录</p>
                 </div>
 
-                <div class="ui success message">
-                    <i class="close icon"></i>
-                    <div class="header">提示：</div>
-                    <p th:text="${msg}">恭喜，操作成功！</p>
-                </div>
+<!--                <div class="ui success message">-->
+<!--                    <i class="close icon"></i>-->
+<!--                    <div class="header">提示：</div>-->
+<!--                    <p th:text="${msg}">恭喜，操作成功！</p>-->
+<!--                </div>-->
 
             </div>
 
@@ -134,16 +134,16 @@
 
 <br>
 <br>
+<br>
+<br>
+<th:block th:replace="admin/_fragments :: script">
+
+</th:block>
 
 <!--底部footer-->
 <footer th:replace="admin/_fragments :: footer">
 
 </footer>
-
-<th:block th:replace="admin/_fragments :: script">
-
-</th:block>
-
 <script>
 
     $('.menu.toggle').click(function () {

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lwz.dao.CommentDao">
 
-
+    <!-- 定义一个名为"comment"的结果映射，映射到Comment类 -->
     <resultMap id="comment" type="com.lwz.pojo.Comment">
         <id property="id" column="cid"/>
         <result property="nickname" column="nickname"/>
@@ -18,8 +18,9 @@
         <association property="blog" javaType="com.lwz.pojo.Anime">
             <id property="id" column="id"/>
         </association>
-    </resultMap>
 
+    </resultMap>
+<!--    根据ID和父评论为空的条件查询评论-->
     <select id="findByBlogIdAndParentCommentNull" resultMap="comment">
         select c.id cid,c.nickname,c.email,c.content,c.avatar,
         c.create_time,c.anime_id,c.parent_comment_id
@@ -28,7 +29,7 @@
         order by c.create_time desc
     </select>
 
-
+<!--    插入评论信息到数据库-->
     <insert id="saveComment" parameterType="com.lwz.pojo.Comment">
         insert into t_comment (nickname,email,content,avatar,
         create_time,anime_id,parent_comment_id, admincomment)
@@ -36,7 +37,7 @@
         #{createTime},#{blogId},#{parentCommentId}, #{adminComment});
     </insert>
 
-
+<!--    根据父评论ID查询评论信息-->
     <select id="findByParentCommentId" resultMap="comment">
         select c.id cid, c.nickname, c.email, c.content, c.avatar,
         c.create_time, c.anime_id, c.parent_comment_id

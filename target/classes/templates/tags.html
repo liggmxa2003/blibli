@@ -8,7 +8,13 @@
 <body class="tag-bg">
 
   <!--导航-->
-  <nav th:replace="_fragments :: menu(3)" ></nav>
+  <nav th:replace="_fragments :: menu(4)" ></nav>
+
+  <div class="header-section">
+    <h1>标签推荐</h1>
+    <p>新鲜热播好剧</p>
+  </div>
+
 
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-big animated fadeIn">
@@ -47,9 +53,10 @@
                     <div class="item">
                       <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime, 'yyyy-MM-dd')}">2020-3-02</span>
                     </div>
-                    <div class="item">
-                      <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>
-                    </div>
+<!--                    浏览次数-->
+<!--                    <div class="item">-->
+<!--                      <i class="eye icon"></i> <span th:text="${blog.views}">2342</span>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="right aligned five wide column">

@@ -18,7 +18,7 @@ public interface AinmeDao {
 
     List<Anime> getAllBlog();
 
-    List<Anime> getByTypeId(Long typeId);  //根据类型id获取番剧
+    List<Anime> getByTypeId(Long typeId);  //根据分类id获取番剧
 
     List<Anime> getByTagId(Long tagId);  //根据标签id获取番剧
 
@@ -34,12 +34,12 @@ public interface AinmeDao {
 
     List<Anime> findByYear(@Param("year") String year);  //按年份查询番剧
 
-    int saveBlog(Anime blog);
+    int saveBlog(Anime blog);//保存番剧信息到数据库
 
-    int saveBlogAndTag(AnimeAndTag blogAndTag);
+    int saveBlogAndTag(AnimeAndTag blogAndTag);//保存博客文章和标签关联信息
 
-    int updateBlog(Anime blog);
+    int updateBlog(Anime blog);//更新博客信息
 
-    int deleteBlog(Long id);
+    int deleteBlog(Long id);//删除指定的博客
 
 }

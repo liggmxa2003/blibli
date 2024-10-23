@@ -1,10 +1,10 @@
 
-body {
-    background: url("/images/bg2.jpg");   //默认背景
-    background-size: cover;
-}
+/*body {*/
+/*    background: url("/images/bg2.jpg");   //默认背景*/
+/*    background-size: cover;*/
+/*}*/
 .index-bg{
-    background: url("/images/bg4.jpg");
+    background: url("/images/bg3.jpeg");
     background-size: cover;
 }
 .type-bg{
@@ -23,7 +23,31 @@ body {
     background: url("/images/bg9.jpg");
     background-size: cover;
 }
+/* 动漫主题的渐变背景 */
+.header-section {
+    background: linear-gradient(135deg, #6a0dad, #ff6bcb, #6ec1e4);
+    /* 紫色到粉色到蓝色的渐变 */
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
 
+/*.header-section {*/
+/*    !*深粉色*!*/
+/*    background-color: #2d2c75; !* 深蓝色背景 *!*/
+/*    padding: 50px;*/
+/*    text-align: center;*/
+/*    color: white;*/
+/*}*/
+.header-section h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header-section p {
+    margin-top: 10px;
+    font-size: 18px;
+}
 
 .m-padded-mini {
     padding: 0.2em !important;
